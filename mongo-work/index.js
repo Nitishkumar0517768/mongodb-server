@@ -5,14 +5,14 @@ const port = 5500;
 
 app.use(express.json());
 
-mongoose.connect("mongodb://localhost:27017/assign")
+mongoose.connect("mongodb+srv://Mongo:9835795451@cluster0.tyulsdf.mongodb.net/assign")
 .then(() => console.log("Connected to MongoDB"))
 .catch(err => console.log("Could not connect", err));
 
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
-        require: true
+        required: true
     },
     email: {
         type: String,
